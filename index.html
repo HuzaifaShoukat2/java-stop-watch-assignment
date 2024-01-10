@@ -111,9 +111,9 @@
             hour = 0;
 
         milisecContainer.innerHTML = ("00");
-        secContainer.innerHTML = ("00");
-        minContainer.innerHTML = ("00");
-        hourContainer.innerHTML = ("00");
+        secContainer.innerHTML = ("00:");
+        minContainer.innerHTML = ("00:");
+        hourContainer.innerHTML = ("00:");
         clearInterval(interval);
         }
         function startWatch(){
@@ -130,7 +130,7 @@
                 milisecContainer.innerHTML = milisec;
             }
             if(sec < 10){
-                secContainer.innerHTML = `0${sec}`;
+                secContainer.innerHTML = `0${sec}:`;
             }
             else if(sec > 59){
                 min++;
@@ -141,7 +141,7 @@
                 secContainer.innerHTML = sec;
             }
             if(min < 10){
-                minContainer.innerHTML =`0${min}`;
+                minContainer.innerHTML =`0${min}:`;
             }
             else if(min > 59){
                 hour++;
@@ -152,7 +152,7 @@
                 minContainer.innerHTML = min;
             }
             if (hour < 10) {
-                hourContainer.innerHTML = `0${hour}`;
+                hourContainer.innerHTML = `0${hour}:`;
             }
             else{
                 hourContainer.innerHTML = hour;
