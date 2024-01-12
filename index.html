@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Font Awsome cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Stop Watch</title>
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
   *{
     padding: 0;
     margin: 0;
@@ -28,18 +25,14 @@
     box-shadow:0 1.97em 3.75em rgba(1,87,185,0.2) ;
   }
   .time{
-    position: relative;
-    width: 110%;
-    background-color: #3c98ff;
-    left: -5%;
+    font-weight: bold;
+    color: #3c98ff;
     padding: 1em 0;
     font-family: "Roboto Mono", monospace;
-    color: #f0f9ff;
-    font-size: 2.8em;
+    font-size: 3em;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    border-radius: 0.3em;
     box-shadow: 0 0.5em 1em rgba(1,87,185,0.2);
   }
   .buttons{
@@ -55,7 +48,7 @@
     border: none;
     font-family: "Poppinss", sans-serif;
     border-radius: 0.5em;
-    padding: 1em 1.5em;
+    padding: 0.7em 1em;
     cursor: pointer;
     outline: none;
   }
@@ -96,14 +89,14 @@
         const stop = document.getElementById("stop");
         const reset = document.getElementById("reset");
 
-        const startTimer = () => {
+        const startTimer = ()=> {
             clearInterval(interval);
             interval = setInterval( startWatch, 10);
         }
-        const stopTimer = () =>{
+        const stopTimer = ()=>{
             clearInterval(interval);
         }
-        const resetTimer =() => {
+        const resetTimer =()=> {
             
             milisec = 0;
             sec = 0;
