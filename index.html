@@ -118,11 +118,11 @@
                 milisec = 0;
                 milisecContainer.innerHTML = "00";
                 sec++;
-            }
+                 }
             else{
                 milisecContainer.innerHTML = milisec;
             }
-            if(sec < 10){
+            if(sec < 9){
                 secContainer.innerHTML = `0${sec}:`;
             }
             else if(sec > 59){
@@ -133,7 +133,7 @@
             else{
                 secContainer.innerHTML = sec;
             }
-            if(min < 10){
+            if(min < 9){
                 minContainer.innerHTML =`0${min}:`;
             }
             else if(min > 59){
@@ -144,7 +144,7 @@
             else {
                 minContainer.innerHTML = min;
             }
-            if (hour < 10) {
+            if (hour < 9) {
                 hourContainer.innerHTML = `0${hour}:`;
             }
             else{
